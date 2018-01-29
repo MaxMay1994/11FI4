@@ -7,25 +7,48 @@ using System.Collections;
 
 namespace Stack
 {
-    public class Stacker<T>
+    public class Stacker
     {
 
-        List<T> list = new List<T>();
+        ArrayList list = new ArrayList();
 
         public bool IsEmpty()
         {
-            return list.Any();
+            return (list.Count == 0);
         }
 
-        public void Push(T obj)
+        public void Push(Object obj)
         {
             list.Add(obj);
         }
 
-        public T Pop()
+        public Object Pop()
         {
-            return list.First();
+
+            if (!IsEmpty())
+            { 
+            Object obj = list[(list.Count - 1)];
+            list.Remove(obj);
+            return obj;
+            }
+            else
+            {
+                return null;
+            }
         } 
+
+        public Object Top()
+        {
+            if (!IsEmpty())
+            {
+                Object obj = list[(list.Count - 1)];
+                return obj;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
 
     }
