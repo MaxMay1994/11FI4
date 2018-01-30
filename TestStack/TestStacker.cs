@@ -131,5 +131,16 @@ namespace TestStack
             AssertionException.Equals(s.Top(), line2);
             AssertionException.Equals(s.Top(), line1);
         }
+
+        [Test]
+        public void TestTopThreeTimesEqualsPush()
+        {
+            Stack.Stacker s = new Stack.Stacker();
+            String line1 = "Object1";
+            s.Push(line1);
+            AssertionException.Equals(s.Top(), line1);
+            AssertionException.Equals(s.Top(), line1);
+            AssertionException.Equals(s.Top(), line1);
+        }
     }
 }
