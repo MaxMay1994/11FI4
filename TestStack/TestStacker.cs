@@ -86,5 +86,12 @@ namespace TestStack
             AssertionException.Equals(s.Top(), line1);
         }
 
+        [Test]
+        public void TestTopOfEmptyStack()
+        {
+            Stack.Stacker s = new Stack.Stacker();
+            Assert.Null(s.Top());
+        }
+
     }
 }
