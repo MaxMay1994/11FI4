@@ -108,5 +108,13 @@ namespace TestStack
             s.Push(null);
             AssertionException.Equals(s.Pop(), null);
         }
+
+        [Test]
+        public void TestPushNullEqualsTop()
+        {
+            Stack.Stacker s = new Stack.Stacker();
+            s.Push(null);
+            AssertionException.Equals(s.Top(), null);
+        }
     }
 }
