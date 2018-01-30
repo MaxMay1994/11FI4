@@ -101,5 +101,12 @@ namespace TestStack
             Assert.False(s.IsEmpty());
         }
 
+        [Test]
+        public void TestPushNullEqualsPop()
+        {
+            Stack.Stacker s = new Stack.Stacker();
+            s.Push(null);
+            AssertionException.Equals(s.Pop(), null);
+        }
     }
 }
