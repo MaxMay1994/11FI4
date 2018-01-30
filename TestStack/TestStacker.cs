@@ -93,5 +93,13 @@ namespace TestStack
             Assert.Null(s.Top());
         }
 
+        [Test]
+        public void TestPushNull()
+        {
+            Stack.Stacker s = new Stack.Stacker();
+            s.Push(null);
+            Assert.False(s.IsEmpty());
+        }
+
     }
 }
