@@ -77,5 +77,14 @@ namespace TestStack
             Assert.False(s.IsEmpty());
         }
 
+        [Test]
+        public void TestPopEqualsTop()
+        {
+            Stack.Stacker s = new Stack.Stacker();
+            String line1 = "Object1";
+            s.Push(line1);
+            AssertionException.Equals(s.Top(), line1);
+        }
+
     }
 }
